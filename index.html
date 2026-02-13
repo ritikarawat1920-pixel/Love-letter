@@ -2,74 +2,82 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Love 💌</title>
+<title>For My Love ❤️</title>
+
 <style>
-body {
-  background: #ffe6f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: sans-serif;
+body{
+  background:#ffe6f0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
 }
 
-.envelope {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  background: #ff4d88;
-  cursor: pointer;
+.container{
+  position:relative;
+  cursor:pointer;
 }
 
-.flap {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 100px solid #ff80aa;
-  top: -100px;
-  transition: transform 0.6s;
-  transform-origin: bottom;
+.envelope{
+  position:relative;
+  width:300px;
+  height:200px;
+  background:#ff4d88;
+  border-radius:6px;
+  overflow:hidden;
 }
 
-.letter {
-  position: absolute;
-  width: 260px;
-  height: 160px;
-  background: white;
-  top: 20px;
-  left: 20px;
-  padding: 15px;
-  box-sizing: border-box;
-  text-align: center;
-  transform: translateY(100%);
-  transition: transform 0.6s;
+.flap{
+  position:absolute;
+  width:0;
+  height:0;
+  border-left:150px solid transparent;
+  border-right:150px solid transparent;
+  border-bottom:100px solid #ff1a66;
+  top:0;
+  transform-origin:top;
+  transition:0.6s;
 }
 
-.open .flap {
-  transform: rotateX(180deg);
+.letter{
+  position:absolute;
+  width:260px;
+  height:160px;
+  background:white;
+  top:20px;
+  left:20px;
+  padding:15px;
+  box-sizing:border-box;
+  transform:translateY(100%);
+  transition:0.6s;
+  border-radius:4px;
 }
 
-.open .letter {
-  transform: translateY(0);
+.open .flap{
+  transform:rotateX(180deg);
+}
+
+.open .letter{
+  transform:translateY(-120px);
 }
 </style>
 </head>
+
 <body>
 
-<div class="envelope" onclick="this.classList.toggle('open')">
-  <div class="flap"></div>
-  <div class="letter">
-    <h3>My Love ❤️</h3>
-    <p>
-      You make my world beautiful.<br>
-      Forever yours 💌<br><br>
-      SATH ME TRAKKI KRENGE 💍
-    </p>
+<div class="container" onclick="this.classList.toggle('open')">
+  <div class="envelope">
+    <div class="flap"></div>
+    <div class="letter">
+      <h3>My Love ❤️</h3>
+      <p>
+        Yahan apna message likho 💕<br>
+        Tum meri duniya ho 💖
+      </p>
+    </div>
   </div>
 </div>
 
 </body>
 </html>
-
