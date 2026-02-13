@@ -1,96 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Open Me ❤️</title>
-
-<style>
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#ffd6e8,#ffeef5);
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Container */
-.wrapper{
-  position:relative;
-  width:350px;
-  height:230px;
-  cursor:pointer;
-}
-
-/* Envelope Base */
-.envelope{
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:#ff4d88;
-  border-radius:10px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
-  z-index:2;
-}
-
-/* Envelope Flap */
-.flap{
-  position:absolute;
-  width:0;
-  height:0;
-  border-left:175px solid transparent;
-  border-right:175px solid transparent;
-  border-bottom:120px solid #ff1a66;
-  top:0;
-  transform-origin:top;
-  transition:0.7s ease;
-  z-index:3;
-}
-
-/* Paper */
-.paper{
-  position:absolute;
-  width:280px;
-  height:200px;
-  background:white;
-  top:25px;
-  left:35px;
-  border-radius:8px;
-  padding:25px;
-  box-sizing:border-box;
-  box-shadow:0 10px 20px rgba(0,0,0,0.15);
-  transform:translateY(150px);
-  transition:0.7s ease;
-  z-index:1;
-}
-
-/* Open Effects */
-.wrapper.open .flap{
-  transform:rotateX(180deg);
-}
-
-.wrapper.open .paper{
-  transform:translateY(-80px);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day card</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Petemoss&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="envelope">
+        <div class="envelope-lid"></div>
+        <div class="envelope-lid envelope-lid-secondary"></div>
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="card-cover">
+                    <div class="card-side card-side-primary">
+                        <h1 class="card-title">
+                            <span class="card-title-secondary">Happy</span>
+                            <span class="card-title-main">Valentine <span
+                                    class="card-title-apostrophe">❤️</span>s</span>
+                            <span class="card-title-secondary">Day</span>
+                        </h1>
+                    </div>
+                    <div class="card-side card-side-secondary"></div>
+                </div>
+                <div class="card-body">
+                    <p>To my love,</p>
+                    <p> I love the way you smile, from your innocence to wild mood... I'm not falling in love with u, I'm  falling for you.. </p>         
+                  <p>Happy Valentine's Day!</p>
+                </div>
+            </div>
+        </div>
+        <div class="heart-seal"></div> </div>
 
-<div class="wrapper" onclick="this.classList.toggle('open')">
-  <div class="envelope"></div>
-  <div class="flap"></div>
-
-  <div class="paper">
-    <h3>My Love ❤️</h3>
-    <p>
-      Jab tum ye envelope open karoge,  
-      ek special message tumhara wait karega 💌<br><br>
-      Yahan apna pura letter likh sakti ho 💕
-    </p>
-  </div>
-</div>
-
+       <script  src="./script.js"></script>
 </body>
 </html>
